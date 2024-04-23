@@ -51,6 +51,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const OpenAIChatService = require('./chatService');
 const OpenAIChatServiceProxy = require('./proxy');
+const cors = require('cors');  // npm install cors
+app.use(cors());  // This will allow all CORS requests
+
 
 app.use(express.json());
 

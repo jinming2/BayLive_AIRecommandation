@@ -36,7 +36,7 @@ class OpenAIChatServiceProxy extends ChatService {
             const addressDetails = parts[1].trim();
             // Check if address details actually look like an address or contain descriptive content
             if (addressDetails.includes(',')) {  // Assuming addresses will contain commas
-                return { type: "restaurant", name: name, address: addressDetails };
+                return { type: "Point of Interest", name: name, address: addressDetails };
             } else {
                 // If not, treat as a chat message that might just be using a semicolon in its text
                 return { type: "chat", response: normalizedItem };

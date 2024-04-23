@@ -41,7 +41,7 @@ class OpenAIChatService extends ChatService {
 async ask(question) {
     try {
         // Crafting a clear and explicit prompt to guide the AI's response format
-        const prompt = `Respond with restaurant recommendations by listing only their names and addresses in the following format:\n\nRestaurant Name; Address.\n\nFor example:\nAmber India; 2290 El Camino Real, Mountain View, CA 94040.\n\nBased on the question: "${question}", please list the recommendations without using numbers or any prefixes before the restaurant names.`;
+        const prompt = `Respond with Point of Interest recommendations by listing only their names and addresses in the following format:\n\nPoint of Interest Name; Address.\n\nFor example:\nAmber India; 2290 El Camino Real, Mountain View, CA 94040.\n\nBased on the question: "${question}", please list the recommendations without using numbers or any prefixes before the restaurant names.`;
         
         const completion = await this.openai.chat.completions.create({
             model: "gpt-3.5-turbo",
