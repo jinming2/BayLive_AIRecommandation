@@ -53,6 +53,9 @@ const OpenAIChatService = require('./chatService');
 const OpenAIChatServiceProxy = require('./proxy');
 const cors = require('cors');  // npm install cors
 app.use(cors());  // This will allow all CORS requests
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://127.0.0.1:27017/baylive');
 
 
 app.use(express.json());
